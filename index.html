@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;</title>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="http://www.tkzgjx.com/static/assets/icon/css/icon.css" rel="stylesheet" type="text/css" />
+<link href="http://www.tkzgjx.com/static/assets/global/css/pc.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://www.tkzgjx.com/static/default/web/css/swiper-bundle.css" />
+<link href="http://www.tkzgjx.com/static/default/web/css/style.css" rel="stylesheet" type="text/css" />
+<link href="http://www.tkzgjx.com/static/default/web/css/page.css" rel="stylesheet" type="text/css" />
+<script src="http://www.tkzgjx.com/static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.tkzgjx.com/static/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<style>
+.page-logo .logo-default-text{font-size:32px;font-weight:700;color:#1b3760;line-height:90px}
+.header-tel-text{font-size:16px;color:#d7000f;font-weight:700;line-height:90px;text-align:right}
+.mySwiper,.mySwiper .swiper-wrapper,.mySwiper .swiper-slide{height:680px}
+.mySwiper{position:relative;overflow:hidden;background:#102844;border-bottom:1px solid #e6e6e6}
+.mySwiper .swiper-wrapper{align-items:stretch}
+.mySwiper .swiper-slide{position:relative;overflow:hidden;background:#102844;opacity:0!important;visibility:hidden;z-index:0}
+.mySwiper .swiper-slide-active,.mySwiper:not(.swiper-initialized) .swiper-slide:first-child{opacity:1!important;visibility:visible;z-index:1}
+.mySwiper .swiper-slide>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+.hero-mask{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,29,54,.68),rgba(8,29,54,.14));z-index:1}
+.hero-copy{position:absolute;left:8%;top:50%;transform:translateY(-50%);z-index:2;width:min(560px,78%);pointer-events:none}
+.hero-copy h2{margin:0 0 18px;font-size:46px;line-height:1.18;color:#fff}
+.hero-copy p{margin:0;font-size:16px;line-height:1.95;color:rgba(255,255,255,.88)}
+.solution-tab ul li.active,.solution-tab ul li:hover{color:#f32020}
+.solution-detail ul{position:relative;overflow:hidden}
+.solution-detail ul li{display:none;position:relative;overflow:hidden;background:#fff}
+.solution-detail ul li.active{display:block}
+.solution-detail ul li img{width:100%;height:430px;object-fit:cover}
+.solution-detail #div2{background:#f14646;color:#fff}
+.solution-detail #div2 .title{font-size:18px;font-weight:700;color:#fff}
+.solution-detail #div2 .detail{color:rgba(255,255,255,.92)}
+.solution-detail .more-btn{display:inline-block;background:#fff;color:#000;border-radius:20px;padding:8px 20px;margin-right:10px}
+.solution-detail .more-btn1{display:inline-block;background:#000;color:#fff;border-radius:20px;padding:8px 20px}
+.solution-detail .date-div{right:30px;bottom:18px}
+.solution-detail .date-div h4{color:#f32020}
+.prothumb{padding:0 0 30px}
+.prothumb img{width:100%;height:190px;object-fit:cover;border:1px solid #eee}
+.prothumb h4{font-size:16px;color:#222;margin:14px 0 0}
+.prothumb .arrow{float:right;font-size:26px;color:#000;line-height:1}
+.about-custom{background:url('http://www.tkzgjx.com/static/default/web/img/aboutbg.jpg') center center/cover no-repeat;padding:70px 0}
+.about-custom .about-photo img{width:100%;height:430px;object-fit:cover}
+.case-custom{background:url('http://www.tkzgjx.com/static/default/web/img/casebg.jpg') center center/cover no-repeat;padding:60px 0}
+.case-custom .mySwiper2 .swiper-slide li{background:#fff;list-style:none}
+.case-custom .mySwiper2 .swiper-slide img{width:100%;height:150px;object-fit:cover}
+.case-custom .mySwiper2 #div2 h4{font-size:16px;color:#222;line-height:1.6;min-height:78px}
+.case-custom .mySwiper2 #div2 p{font-size:14px;color:#777}
+.case-custom>.n_more1{width:180px;height:48px;line-height:48px;border-radius:24px;background:#f32020;margin:24px auto 0;text-align:center}
+.case-custom>.n_more1 a{display:block;color:#fff;font-weight:700}
+.hnews-cover{width:100%;height:320px;object-fit:cover}
+.page-footer .form-control{height:28px}
+.page-footer textarea.form-control{height:50px}
+.page-footer .links{margin:10px 0 6px}
+.page-footer .links a{white-space:nowrap}
+.page-footer .tpline{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.page-footer .tpline .copy-text{flex:1;min-width:280px;white-space:nowrap}
+.page-footer .tpline .copy-text a{white-space:nowrap}
+.page-footer .tpline .policy-text{white-space:nowrap}
+.page-footer .f_content li{list-style:none}
+@media (max-width:991px){
+.page-logo .logo-default-text,.header-tel-text{line-height:1.4;padding:20px 0 0;text-align:left}
+.mySwiper,.mySwiper .swiper-wrapper,.mySwiper .swiper-slide{height:420px}
+.hero-copy{left:20px;width:calc(100% - 40px)}
+.hero-copy h2{font-size:28px}
+.page-head .row>[class*='col-'],.prothumb .row>[class*='col-'],.about-custom .row>[class*='col-'],.case-custom .row>[class*='col-'],.hnews2>[class*='col-']{float:none!important;width:100%!important;max-width:100%!important}
+.solution-tab,.solution-detail{float:none!important;width:100%!important}
+.solution-tab{margin-bottom:20px}
+.solution-tab ul{padding:0;margin:0}
+.solution-tab ul li{padding:12px 0;border-bottom:1px solid #f0f0f0;font-size:18px;line-height:1.6}
+.solution-detail{padding:0}
+.solution-detail .col-lg-3.fr{float:none!important;width:100%!important;padding:0;margin:0 0 18px}
+.solution-detail .n_more{width:100%;height:46px;line-height:46px;border-radius:23px}
+.solution-detail ul li{padding-bottom:0}
+.solution-detail ul li img{display:block;width:100%;height:220px}
+.solution-detail #div2{padding:18px 16px!important}
+.solution-detail #div2 .title{font-size:22px;line-height:1.4;margin:0 0 10px}
+.solution-detail #div2 .detail{font-size:15px;line-height:1.9}
+.solution-detail .more-btn,.solution-detail .more-btn1{margin:10px 10px 0 0}
+.solution-detail .date-div{position:static!important;text-align:right;padding:10px 16px 0}
+.prothumb{padding:10px 0 0}
+.prothumb .row>[class*='col-']{margin-bottom:22px}
+.prothumb h4{line-height:1.6}
+.about-custom .about-photo img,.hnews-cover{height:220px}
+.about-custom,.case-custom{padding:42px 0}
+.hnews2 .p20,.case-custom .mySwiper2 .swiper-slide li{padding-left:0;padding-right:0}
+.page-footer .row>[class*='col-']{float:none!important;width:100%!important;max-width:100%!important;text-align:left!important}
+.page-footer .links{display:block;margin:12px 0 4px;text-align:left}
+.page-footer .links a{display:inline-block;white-space:nowrap}
+.page-footer .tpline{display:block}
+.page-footer .tpline .copy-text{display:block;min-width:0;white-space:normal;line-height:1.8;margin-bottom:6px}
+.page-footer .tpline .copy-text a{white-space:normal}
+.page-footer .tpline .policy-text{display:block;white-space:normal;text-align:left!important;line-height:1.8}
+}
+</style>
+</head>
+<body class="page-container-bg-solid">
+<div class="page-header">
+  <div class="page-header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 page-logo">
+          <a href="javascript:void(0)">
+            <div class="logo-default-text">&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;</div>
+          </a>
+        </div>
+        <div class="col-md-3 hidden-sm hidden-xs text-right">
+          <div class="header-tel-text">&#30005;&#21147;&#30005;&#28304; / &#39640;&#21387;&#21464;&#39057;&#22120; / &#22312;&#32447;&#30417;&#27979;&#31995;&#32479;</div>
+        </div>
+        <div class="col-md-3 hidden-xs fr">
+          <div class="page-header-search margin-top-10">
+            <form class="search-form" action="javascript:void(0)">
+              <div class="input-group">
+                <input type="text" placeholder="&#25628;&#32034;&#20869;&#23481;..." class="fc-search-keyword form-control">
+                <div class="input-group-btn"><button class="btn default" type="button"><i class="fa fa-search"></i></button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-header-menu margin-top-10">
+    <div class="container">
+      <div class="nav1">
+        <ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+          <li class="active"><a href="#home">&#32593;&#31449;&#39318;&#39029;</a></li>
+          <li><a href="#about">&#20851;&#20110;&#25105;&#20204;</a></li>
+          <li><a href="#products">&#20135;&#21697;&#20013;&#24515;</a></li>
+          <li><a href="#cases">&#26696;&#20363;&#23637;&#31034;</a></li>
+          <li><a href="#news">&#26032;&#38395;&#20013;&#24515;</a></li>
+          <li><a href="#footer">&#32852;&#31995;&#25105;&#20204;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="swiper mySwiper" id="home">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="hero-mask"></div>
+      <img src="web-assets/campus-aerial.png" alt="">
+      <div class="hero-copy">
+        <h2>&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;</h2>
+        <p>&#25104;&#31435;&#20110;2003&#24180;&#65292;&#27880;&#20876;&#36164;&#37329;11000&#19975;&#20803;&#65292;&#20027;&#33829;&#30005;&#21147;&#30005;&#28304;&#12289;&#39640;&#21387;&#21464;&#39057;&#22120;&#12289;&#21464;&#30005;&#31449;&#29366;&#24577;&#30417;&#27979;&#31995;&#32479;&#19977;&#22823;&#31867;&#20135;&#21697;&#65292;&#25345;&#32493;&#26381;&#21153;&#29305;&#39640;&#21387;&#12289;&#30005;&#21378;&#12289;&#27700;&#30005;&#31449;&#19982;&#26032;&#33021;&#28304;&#39033;&#30446;&#24314;&#35774;&#12290;</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="hero-mask"></div>
+      <img src="web-assets/power-supply.jpg" alt="">
+      <div class="hero-copy">
+        <h2>&#38754;&#21521;&#33021;&#28304;&#19982;&#30005;&#21147;&#22330;&#26223;&#30340;&#31283;&#23450;&#20132;&#20184;&#33021;&#21147;</h2>
+        <p>&#22260;&#32469;&#22823;&#22411;&#27700;&#30005;&#12289;&#28779;&#30005;&#12289;&#36755;&#21464;&#30005;&#19982;&#28165;&#27905;&#33021;&#28304;&#24314;&#35774;&#38656;&#27714;&#65292;&#24418;&#25104;&#20135;&#21697;&#24212;&#29992;&#19982;&#24037;&#31243;&#37197;&#22871;&#30340;&#32508;&#21512;&#35299;&#20915;&#26041;&#26696;&#12290;</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="hero-mask"></div>
+      <img src="web-assets/inverter-real.jpg" alt="">
+      <div class="hero-copy">
+        <h2>&#30005;&#21147;&#30005;&#28304; / &#39640;&#21387;&#21464;&#39057;&#22120; / &#22312;&#32447;&#30417;&#27979;</h2>
+        <p>&#32858;&#28966;&#31995;&#32479;&#31283;&#23450;&#12289;&#23433;&#20840;&#36816;&#32500;&#19982;&#33410;&#33021;&#22686;&#25928;&#65292;&#25345;&#32493;&#23436;&#21892;&#33258;&#21160;&#21270;&#20135;&#21697;&#30697;&#38453;&#19982;&#39033;&#30446;&#23454;&#36341;&#32463;&#39564;&#12290;</p>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<div class="page-wrapper-row full-height">
+  <div class="page-wrapper-middle">
+    <div class="page-head" id="products">
+      <div class="container mt40">
+        <div class="row">
+          <div class="solution-tab col-md-3 fl">
+            <div class="htitle" style="padding-top:3px"><a href="javascript:void(0)"><h2 class="text-left">&#20135;&#21697;&#23637;&#31034;</h2></a></div>
+            <ul>
+              <li data-item="item1"><span class="fw600">&#183; </span>&#30005;&#21147;&#30005;&#28304;&#20135;&#21697;</li>
+              <li class="active" data-item="item2"><span class="fw600">&#183; </span>&#39640;&#21387;&#21464;&#39057;&#22120;&#20135;&#21697;</li>
+              <li data-item="item3"><span class="fw600">&#183; </span>&#22312;&#32447;&#30417;&#27979;&#20135;&#21697;</li>
+            </ul>
+          </div>
+          <div class="solution-detail col-md-9 fr">
+            <div class="col-lg-3 fr"><a href="javascript:void(0)"><div class="n_more text-center">READ MORE +</div></a></div>
+            <ul>
+              <li class="item1">
+                <a class="mimg" href="javascript:void(0)"><img src="web-assets/power-supply.jpg" alt=""></a>
+                <div id="div2" class="p20">
+                  <p class="title">&#30005;&#21147;&#30005;&#28304;&#20135;&#21697;</p>
+                  <p class="detail">&#35206;&#30422;&#26234;&#33021;&#19968;&#20307;&#21270;&#30005;&#28304;&#12289;&#30452;&#27969;&#30005;&#28304;&#31995;&#32479;&#31561;&#22330;&#26223;&#65292;&#26381;&#21153;&#29305;&#39640;&#21387;&#12289;&#28023;&#19978;&#39118;&#30005;&#12289;&#27700;&#30005;&#31449;&#31561;&#37325;&#28857;&#39033;&#30446;&#12290;</p>
+                  <a class="more-btn" href="javascript:void(0)">&#26597;&#30475;&#26356;&#22810;</a>
+                  <a class="more-btn1" href="javascript:void(0)">&#31435;&#21363;&#21672;&#35810;</a>
+                </div>
+                <div class="date-div"><h4 class="fw600">01/<span class="red">03</span></h4></div>
+              </li>
+              <li class="item2 active">
+                <a class="mimg" href="javascript:void(0)"><img src="web-assets/inverter-real.jpg" alt=""></a>
+                <div id="div2" class="p20">
+                  <p class="title">&#39640;&#21387;&#21464;&#39057;&#22120;&#20135;&#21697;</p>
+                  <p class="detail">&#24050;&#22312;&#30334;&#19975;&#26426;&#32452;&#12289;&#20379;&#28909;&#25913;&#36896;&#12289;&#29028;&#30005;&#39033;&#30446;&#20013;&#23454;&#29616;&#31283;&#23450;&#24212;&#29992;&#65292;&#25345;&#32493;&#25512;&#36827;&#33410;&#33021;&#22686;&#25928;&#12290;</p>
+                  <a class="more-btn" href="javascript:void(0)">&#26597;&#30475;&#26356;&#22810;</a>
+                  <a class="more-btn1" href="javascript:void(0)">&#31435;&#21363;&#21672;&#35810;</a>
+                </div>
+                <div class="date-div"><h4 class="fw600">02/<span class="red">03</span></h4></div>
+              </li>
+              <li class="item3">
+                <a class="mimg" href="javascript:void(0)"><img src="web-assets/monitoring-main.jpg" alt=""></a>
+                <div id="div2" class="p20">
+                  <p class="title">&#22312;&#32447;&#30417;&#27979;&#20135;&#21697;</p>
+                  <p class="detail">&#28085;&#30422;&#23616;&#25918;&#12289;&#36991;&#38647;&#22120;&#12289;SF6&#27668;&#20307;&#12289;&#26029;&#36335;&#22120;&#26426;&#26500;&#31561;&#22312;&#32447;&#30417;&#27979;&#65292;&#25903;&#25745;&#36755;&#21464;&#30005;&#23433;&#20840;&#36816;&#32500;&#12290;</p>
+                  <a class="more-btn" href="javascript:void(0)">&#26597;&#30475;&#26356;&#22810;</a>
+                  <a class="more-btn1" href="javascript:void(0)">&#31435;&#21363;&#21672;&#35810;</a>
+                </div>
+                <div class="date-div"><h4 class="fw600">03/<span class="red">03</span></h4></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container prothumb">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6"><img src="web-assets/power-supply.jpg" alt=""><h4>&#30005;&#21147;&#30005;&#28304;&#20135;&#21697;<span class="arrow">&#8250;</span></h4></div>
+        <div class="col-lg-3 col-md-3 col-sm-6"><img src="web-assets/inverter-real.jpg" alt=""><h4>&#39640;&#21387;&#21464;&#39057;&#22120;&#20135;&#21697;<span class="arrow">&#8250;</span></h4></div>
+        <div class="col-lg-3 col-md-3 col-sm-6"><img src="web-assets/monitoring-box.jpg" alt=""><h4>&#22312;&#32447;&#30417;&#27979;&#20135;&#21697;<span class="arrow">&#8250;</span></h4></div>
+        <div class="col-lg-3 col-md-3 col-sm-6"><img src="web-assets/campus-aerial.png" alt=""><h4>&#33258;&#21160;&#21270;&#24037;&#31243;&#24212;&#29992;<span class="arrow">&#8250;</span></h4></div>
+      </div>
+    </div>
+
+    <div class="about-custom" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10"><a href="javascript:void(0)"><div class="col-lg-10 htitle"><h2>&#20851;&#20110;&#25105;&#20204;</h2><h4 class="fup">ABOUT US</h4></div></a></div>
+          <div class="col-lg-2 fr"><a href="javascript:void(0)"><div class="text-center red fup fw600 n_moret">READ MORE +</div></a></div>
+        </div>
+        <div class="row mt40">
+          <div class="col-md-6">
+            <h1 class="fw600 red">&#36861;&#27714;&#21331;&#36234; &#183; &#22238;&#25253;&#31038;&#20250;</h1>
+            <h4 class="bolder fup gray">Pursuit of excellence Return to society</h4>
+            <p class="line200 f16 tindent2">&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;&#38271;&#26399;&#22260;&#32469;&#33021;&#28304;&#22522;&#30784;&#35774;&#26045;&#24314;&#35774;&#38656;&#27714;&#65292;&#25345;&#32493;&#23436;&#21892;&#30005;&#21147;&#30005;&#28304;&#12289;&#39640;&#21387;&#21464;&#39057;&#22120;&#21644;&#22312;&#32447;&#30417;&#27979;&#20135;&#21697;&#30697;&#38453;&#65292;&#24418;&#25104;&#36739;&#24378;&#30340;&#34892;&#19994;&#36866;&#37197;&#33021;&#21147;&#12290;&#20135;&#21697;&#19982;&#26041;&#26696;&#38754;&#21521;&#29305;&#39640;&#21387;&#24037;&#31243;&#12289;&#30005;&#21378;&#12289;&#27700;&#30005;&#31449;&#12289;&#21306;&#22495;&#20379;&#28909;&#21450;&#26032;&#33021;&#28304;&#39033;&#30446;&#31561;&#22797;&#26434;&#24037;&#20917;&#65292;&#24378;&#35843;&#35774;&#22791;&#31283;&#23450;&#24615;&#12289;&#36816;&#34892;&#23433;&#20840;&#24615;&#19982;&#21518;&#26399;&#36816;&#32500;&#25928;&#29575;&#12290;</p>
+            <div class="amore mt40">
+              <li><a href="javascript:void(0)">&#20844;&#21496;&#31616;&#20171;</a></li>
+              <li><a href="javascript:void(0)">&#20225;&#19994;&#25991;&#21270;</a></li>
+              <li><a href="javascript:void(0)">&#33635;&#35465;&#36164;&#36136;</a></li>
+            </div>
+          </div>
+          <div class="col-lg-6 fr about-photo"><img src="web-assets/campus-aerial.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-custom" id="cases">
+      <div class="container">
+        <div class="row mt40">
+          <div class="col-lg-6 fl"><a href="javascript:void(0)"><div class="col-lg-10 htitle"><h2>&#26696;&#20363;<span class="zs">&#23637;&#31034;</span></h2><p>CASE DISPLAY</p><h4>&#20135;&#21697;&#26381;&#21153;&#26377;&#20445;&#38556; &#183; &#21806;&#21518;&#26381;&#21153;&#24744;&#25918;&#24515;</h4></div></a></div>
+          <div class="col-lg-5 fr"><h2 class="fw600 text-right">&#20840;&#22269;&#24212;&#29992;&#26696;&#20363;</h2><h3 class="bolder text-right">&#20132;&#20184;&#20197;&#23458;&#25143;&#28385;&#24847;&#24230;&#20026;&#26631;&#20934;</h3></div>
+        </div>
+        <div class="row">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper incase mt40">
+              <div class="swiper-slide"><li><a href="javascript:void(0)"><div id="div1"><img src="web-assets/power-supply.jpg" alt=""></div><div id="div2" class="p20"><h4 class="p20">&#21452;&#27743;&#21475;&#27700;&#30005;&#31449;&#30452;&#27969;&#30005;&#28304;&#31995;&#32479;</h4><p>2026-06-27</p></div></a></li></div>
+              <div class="swiper-slide"><li><a href="javascript:void(0)"><div id="div1"><img src="web-assets/monitoring-gas.jpg" alt=""></div><div id="div2" class="p20"><h4 class="p20">&#32496;&#26031;&#30002;&#27700;&#30005;&#31449;&#30452;&#27969;&#30005;&#28304;&#31995;&#32479;</h4><p>2026-06-27</p></div></a></li></div>
+              <div class="swiper-slide"><li><a href="javascript:void(0)"><div id="div1"><img src="web-assets/inverter-real.jpg" alt=""></div><div id="div2" class="p20"><h4 class="p20">&#31206;&#30343;&#23707;&#28909;&#30005;&#32852;&#20135;&#39033;&#30446;</h4><p>2026-06-27</p></div></a></li></div>
+              <div class="swiper-slide"><li><a href="javascript:void(0)"><div id="div1"><img src="web-assets/power-supply.jpg" alt=""></div><div id="div2" class="p20"><h4 class="p20">&#30005;&#21147;&#30005;&#28304;&#24037;&#31243;&#24212;&#29992;</h4><p>2026-06-27</p></div></a></li></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="n_more1"><a href="javascript:void(0)">READ MORE</a></div>
+    </div>
+
+    <div class="container">
+      <div class="page-content-inner">
+        <div class="row mt40">
+          <div class="col-lg-6"><a href="javascript:void(0)"><div class="col-lg-10 htitle"><h2>&#26032;&#38395;&#20013;&#24515;</h2><p>NEWS CENTER</p></div></a></div>
+          <div class="col-lg-2 fr"><a href="javascript:void(0)"><div class="n_more text-center">READ MORE +</div></a></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 hnews mt40">
+            <img class="hnews-cover" src="web-assets/campus-aerial.png" alt="">
+            <a href="javascript:void(0)">
+              <h5>&#26032;&#38395;&#20013;&#24515;--2026-06-27</h5>
+              <h3>&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;&#39033;&#30446;&#24212;&#29992;&#23637;&#31034;</h3>
+              <h4>&#25345;&#32493;&#22260;&#32469;&#30005;&#21147;&#30005;&#28304;&#12289;&#39640;&#21387;&#21464;&#39057;&#22120;&#12289;&#21464;&#30005;&#31449;&#29366;&#24577;&#30417;&#27979;&#31995;&#32479;&#31561;&#20135;&#21697;&#26041;&#21521;&#31215;&#32047;&#39033;&#30446;&#32463;&#39564;&#65292;&#38754;&#21521;&#33021;&#28304;&#12289;&#30005;&#32593;&#19982;&#24037;&#19994;&#22330;&#26223;&#25552;&#20379;&#31283;&#23450;&#21487;&#38752;&#30340;&#33258;&#21160;&#21270;&#25903;&#25745;&#12290;</h4>
+              <div class="n_more1 fw600">READ MORE+</div>
+            </a>
+          </div>
+        </div>
+        <div class="row hnews2 mt40">
+          <div class="col-lg-4 p20"><a href="javascript:void(0)"><h2 class="fw600">21</h2><h5 class="fw600">2026-04</h5><h4>&#31070;&#26408;&#31070;&#20449;2&#215;660MW&#21457;&#30005;&#24037;&#31243;</h4><p>&#39640;&#21387;&#21464;&#39057;&#22120;&#25104;&#21151;&#25237;&#36816;&#65292;&#23454;&#29616;&#22823;&#23481;&#37327;&#39640;&#21387;&#21464;&#39057;&#22120;&#26080;&#25200;&#20999;&#25442;&#19994;&#32489;&#31361;&#30772;&#12290;</p><div class="n_more1">READ MORE</div></a></div>
+          <div class="col-lg-4 p20"><a href="javascript:void(0)"><h2 class="fw600">28</h2><h5 class="fw600">2023-07</h5><h4>&#27993;&#27743;&#21326;&#28070;&#28201;&#24030;&#30005;&#21378;&#20108;&#26399;</h4><p>&#38754;&#21521;&#28165;&#27905;&#39640;&#25928;&#33021;&#28304;&#24314;&#35774;&#22330;&#26223;&#65292;&#21161;&#21147;&#38477;&#20302;&#33021;&#32791;&#24182;&#25552;&#21319;&#31995;&#32479;&#36816;&#34892;&#31283;&#23450;&#24615;&#12290;</p><div class="n_more1">READ MORE</div></a></div>
+          <div class="col-lg-4 p20"><a href="javascript:void(0)"><h2 class="fw600">19</h2><h5 class="fw600">2022-11</h5><h4>&#31908;&#35199;500kV&#32593;&#26550;&#20248;&#21270;&#19968;&#26399;&#24037;&#31243;</h4><p>&#25903;&#25745;&#28023;&#19978;&#39118;&#30005;&#19982;&#21306;&#22495;&#30005;&#32593;&#21327;&#21516;&#24314;&#35774;&#65292;&#25552;&#21319;&#28165;&#27905;&#33021;&#28304;&#28040;&#32435;&#19982;&#20379;&#30005;&#20445;&#38556;&#33021;&#21147;&#12290;</p><div class="n_more1">READ MORE</div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper-row">
+  <div class="page-wrapper-bottom">
+    <div class="page-footer" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"><img src="http://www.tkzgjx.com/static/default/web/img/f_tel.png" alt="" /></div>
+          <div class="col-md-9 text-right">
+            <ul class="foot_menu fr">
+              <li><a href="javascript:void(0)">&#20851;&#20110;&#25105;&#20204;</a></li>
+              <li><a href="javascript:void(0)">&#20135;&#21697;&#20013;&#24515;</a></li>
+              <li><a href="javascript:void(0)">&#26032;&#38395;&#20013;&#24515;</a></li>
+              <li><a href="javascript:void(0)">&#33635;&#35465;&#36164;&#36136;</a></li>
+              <li><a href="javascript:void(0)">&#32852;&#31995;&#25105;&#20204;</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"><img src="http://www.tkzgjx.com/static/default/web/img/ewm.png" alt="" /></div>
+          <div class="col-md-5 f_content">
+            <li>&#30005;&#35805;&#65306;0538-8930569</li>
+            <li>&#32593;&#22336;&#65306;http://127.0.0.1:12127/____________.html</li>
+            <li>&#37038;&#31665;&#65306;tkzdh@163.com</li>
+            <li>&#22320;&#22336;&#65306;&#23665;&#19996;&#30465;&#27888;&#23433;&#24066;</li>
+          </div>
+          <div class="col-md-5 mt-10 fr">
+            <form class="form-horizontal">
+              <div class="fc-form-body">
+                <div class="col-md-12">
+                  <div class="col-md-6"><div class="form-group"><label class="control-label col-md-4"><span class="required" aria-required="true"> * </span>&#32852;&#31995;&#20154;</label><div class="col-md-8"><input class="form-control" type="text" style="width:100px;" /></div></div></div>
+                  <div class="col-md-6"><div class="form-group"><label class="control-label col-md-4">&#30005;&#35805;</label><div class="col-md-8"><input class="form-control" type="text" style="width:100px;" /></div></div></div>
+                </div>
+                <div class="col-md-12">
+                  <div class="col-md-6"><div class="form-group"><label class="control-label col-md-4">&#37038;&#31665;</label><div class="col-md-8"><input class="form-control" type="text" style="width:100px;" /></div></div></div>
+                  <div class="col-md-6"><div class="form-group"><label class="control-label col-md-4">&#39564;&#35777;&#30721;</label><div class="col-md-8"><div class="input-group"><input type="text" class="form-control"><div class="input-group-btn fc-code"><img align="absmiddle" src="http://www.tkzgjx.com/index.php?s=api&c=api&m=captcha&width=120&height=35" /></div></div></div></div></div>
+                </div>
+                <div class="col-md-12"><div class="form-group"><label class="control-label col-md-2 text-right">&#30041;&#35328;&#20869;&#23481;</label><div class="col-md-10"><textarea class="form-control" style="height:50px; width:90%;"></textarea></div></div></div>
+              </div>
+              <div class="portlet-body col-md-12 form fr"><div class="form-actions text-center"><button type="button" class="btn green"><i class="fa fa-save"></i> &#25552;&#20132;&#20869;&#23481;</button></div></div>
+            </form>
+          </div>
+          <div class="links"><a href="javascript:void(0)" rel="nofollow" target="_blank">&#27888;&#24320;&#33258;&#21160;&#21270;</a></div>
+          <div class="row tpline">
+            <div class="copy-text">Copyright &copy; 2022-2026 <a href="javascript:void(0)">&copy;&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;</a></div>
+            <div class="policy-text text-right"><a href="javascript:void(0)">&#27861;&#24459;&#22768;&#26126;</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="javascript:void(0)">&#38544;&#31169;&#21327;&#35758;</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-to-top"><i class="fa fa-arrow-up"></i></div>
+    </div>
+  </div>
+</div>
+
+<script src="http://www.tkzgjx.com/static/default/web/scripts/swiper-bundle.min.js"></script>
+<script>
+$(function() {
+  $('.solution-tab ul li').each(function() {
+    $(this).hover(function() {
+      $('.solution-tab ul li').removeClass('active');
+      $('.solution-detail ul li').removeClass('active');
+      $(this).addClass('active');
+      $('.solution-detail ul li.' + $(this).attr('data-item')).addClass('active');
+    });
+  });
+});
+var swiper = new Swiper(".mySwiper", {
+  speed:1000,
+  spaceBetween:0,
+  centeredSlides:true,
+  autoplay:{delay:4000,disableOnInteraction:false},
+  pagination:{el:".mySwiper .swiper-pagination",clickable:true},
+  navigation:{nextEl:".mySwiper .swiper-button-next",prevEl:".mySwiper .swiper-button-prev"}
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  slidesPerView:4,
+  spaceBetween:30,
+  slidesPerGroup:1,
+  loop:true,
+  loopFillGroupWithBlank:true,
+  autoplay:{delay:4000,disableOnInteraction:false},
+  pagination:{el:".mySwiper2 .swiper-pagination",clickable:true},
+  navigation:{nextEl:".mySwiper2 .swiper-button-next",prevEl:".mySwiper2 .swiper-button-prev"},
+  breakpoints:{0:{slidesPerView:1},768:{slidesPerView:2},1200:{slidesPerView:4}}
+});
+</script>
+</body>
+</html>
