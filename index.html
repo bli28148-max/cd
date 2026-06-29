@@ -62,6 +62,15 @@
 .page-footer .tpline .copy-text a{white-space:nowrap}
 .page-footer .tpline .policy-text{white-space:nowrap}
 .page-footer .f_content li{list-style:none}
+.page-footer{overflow:hidden}
+.page-footer img{max-width:100%;height:auto}
+.page-footer .footer-tel-img{display:block;max-width:230px}
+.page-footer .footer-qr-img{display:block;width:108px;height:108px;object-fit:contain}
+.page-footer .foot_menu{margin:0;padding:0}
+.page-footer .foot_menu li{display:inline-block;list-style:none;margin-left:26px}
+.page-footer .form-horizontal .form-group{margin-left:0;margin-right:0}
+.page-footer .form-control{width:100%!important}
+.page-footer .fc-code img{width:120px;height:35px;max-width:none;object-fit:cover}
 @media (max-width:991px){
 .page-logo .logo-default-text,.header-tel-text{line-height:1.4;padding:20px 0 0;text-align:left}
 .mySwiper,.mySwiper .swiper-wrapper,.mySwiper .swiper-slide{height:420px}
@@ -89,6 +98,9 @@
 .about-custom,.case-custom{padding:42px 0}
 .hnews2 .p20,.case-custom .mySwiper2 .case-card{padding-left:0;padding-right:0}
 .page-footer .row>[class*='col-']{float:none!important;width:100%!important;max-width:100%!important;text-align:left!important}
+.page-footer .footer-tel-img{max-width:220px;margin-bottom:16px}
+.page-footer .footer-qr-img{margin:0 0 14px}
+.page-footer .foot_menu li{margin:0 18px 8px 0}
 .page-footer .links{display:block;margin:12px 0 4px;text-align:left}
 .page-footer .links a{display:inline-block;white-space:nowrap}
 .page-footer .tpline{display:block}
@@ -309,7 +321,7 @@
     <div class="page-footer" id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-3"><img src="web-assets/power-supply.jpg" alt="" /></div>
+          <div class="col-md-3"><img class="footer-tel-img" src="static/default/web/img/f_tel.png" alt="" /></div>
           <div class="col-md-9 text-right">
             <ul class="foot_menu fr">
               <li><a href="javascript:void(0)">&#20851;&#20110;&#25105;&#20204;</a></li>
@@ -321,7 +333,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-2"><img src="web-assets/campus-aerial.png" alt="" /></div>
+          <div class="col-md-2"><img class="footer-qr-img" src="static/default/web/img/ewm.png" alt="" /></div>
           <div class="col-md-5 f_content">
             <li>&#30005;&#35805;&#65306;0538-8930569</li>
             <li>&#32593;&#22336;&#65306;https://bli28148-max.github.io/cd/</li>
