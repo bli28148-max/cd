@@ -52,9 +52,9 @@
 .hnews-cover{width:100%;height:320px;object-fit:cover}
 .page-footer .form-control{height:28px}
 .page-footer textarea.form-control{height:50px}
-.page-footer .links{margin:10px 0 6px}
+.page-footer .links{clear:both;margin:10px 0 6px}
 .page-footer .links a{white-space:nowrap}
-.page-footer .tpline{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.page-footer .tpline{clear:both;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .page-footer .tpline .copy-text{flex:1;min-width:280px;white-space:nowrap}
 .page-footer .tpline .copy-text a{white-space:nowrap}
 .page-footer .tpline .policy-text{white-space:nowrap}
@@ -66,6 +66,12 @@
 .page-footer .foot_menu{margin:0;padding:0}
 .page-footer .foot_menu li{display:inline-block;list-style:none;margin-left:26px}
 .page-footer .form-horizontal .form-group{margin-left:0;margin-right:0}
+.page-footer .fc-form-body{display:block;overflow:hidden}
+.page-footer .fc-form-body>.col-md-12{float:none;width:100%;display:flex;gap:12px;padding-left:0;padding-right:0}
+.page-footer .fc-form-body>.col-md-12>.col-md-6{float:none;width:50%;padding-left:0;padding-right:0}
+.page-footer .form-horizontal .form-group{display:flex;align-items:center;gap:8px}
+.page-footer .form-horizontal .control-label{flex:0 0 58px;width:58px!important;max-width:58px;white-space:nowrap;text-align:right;padding:0;line-height:28px}
+.page-footer .form-horizontal .form-group>.col-md-8,.page-footer .form-horizontal .form-group>.col-md-10{float:none;width:auto!important;max-width:none;flex:1;padding-left:0;padding-right:0}
 .page-footer .form-control{width:100%!important}
 .page-footer .fc-code img{width:120px;height:35px;max-width:none;object-fit:cover}
 @media (max-width:991px){
@@ -95,6 +101,10 @@
 .about-custom,.case-custom{padding:42px 0}
 .hnews2 .p20,.case-custom .mySwiper2 .case-card{padding-left:0;padding-right:0}
 .page-footer .row>[class*='col-']{float:none!important;width:100%!important;max-width:100%!important;text-align:left!important}
+.page-footer .fc-form-body>.col-md-12{display:block}
+.page-footer .fc-form-body>.col-md-12>.col-md-6{width:100%}
+.page-footer .form-horizontal .form-group{align-items:flex-start}
+.page-footer .form-horizontal .control-label{flex:0 0 82px;width:82px!important;max-width:82px;text-align:left;line-height:28px}
 .page-footer .footer-tel-img{max-width:220px;margin-bottom:16px}
 .page-footer .footer-qr-img{margin:0 0 14px}
 .page-footer .foot_menu li{margin:0 18px 8px 0}
