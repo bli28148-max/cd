@@ -17,12 +17,8 @@
 <style>
 .page-logo .logo-default-text{font-size:32px;font-weight:700;color:#1b3760;line-height:90px}
 .header-tel-text{font-size:16px;color:#d7000f;font-weight:700;line-height:90px;text-align:right}
-.mySwiper,.mySwiper .swiper-wrapper,.mySwiper .swiper-slide{height:680px}
-.mySwiper{position:relative;overflow:hidden;background:#102844;border-bottom:1px solid #e6e6e6}
-.mySwiper .swiper-wrapper{align-items:stretch}
-.mySwiper .swiper-slide{position:relative;overflow:hidden;background:#102844;opacity:0!important;visibility:hidden;z-index:0}
-.mySwiper .swiper-slide-active,.mySwiper:not(.swiper-initialized) .swiper-slide:first-child{opacity:1!important;visibility:visible;z-index:1}
-.mySwiper .swiper-slide>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+.hero-video{clear:both;display:block;width:100%;height:680px;position:relative;overflow:hidden;background:#102844;border-bottom:1px solid #e6e6e6}
+.hero-video video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
 .hero-mask{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,29,54,.68),rgba(8,29,54,.14));z-index:1}
 .hero-copy{position:absolute;left:8%;top:50%;transform:translateY(-50%);z-index:2;width:min(560px,78%);pointer-events:none}
 .hero-copy h2{margin:0 0 18px;font-size:46px;line-height:1.18;color:#fff}
@@ -74,7 +70,7 @@
 .page-footer .fc-code img{width:120px;height:35px;max-width:none;object-fit:cover}
 @media (max-width:991px){
 .page-logo .logo-default-text,.header-tel-text{line-height:1.4;padding:20px 0 0;text-align:left}
-.mySwiper,.mySwiper .swiper-wrapper,.mySwiper .swiper-slide{height:420px}
+.hero-video{height:420px}
 .hero-copy{left:20px;width:calc(100% - 40px)}
 .hero-copy h2{font-size:28px}
 .page-head .row>[class*='col-'],.prothumb .row>[class*='col-'],.about-custom .row>[class*='col-'],.case-custom .row>[class*='col-'],.hnews2>[class*='col-']{float:none!important;width:100%!important;max-width:100%!important}
@@ -153,36 +149,15 @@
   </div>
 </div>
 
-<div class="swiper mySwiper" id="home">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <div class="hero-mask"></div>
-      <img src="web-assets/campus-aerial.png" alt="">
-      <div class="hero-copy">
-        <h2>&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;</h2>
-        <p>&#25104;&#31435;&#20110;2003&#24180;&#65292;&#27880;&#20876;&#36164;&#37329;11000&#19975;&#20803;&#65292;&#20027;&#33829;&#30005;&#21147;&#30005;&#28304;&#12289;&#39640;&#21387;&#21464;&#39057;&#22120;&#12289;&#21464;&#30005;&#31449;&#29366;&#24577;&#30417;&#27979;&#31995;&#32479;&#19977;&#22823;&#31867;&#20135;&#21697;&#65292;&#25345;&#32493;&#26381;&#21153;&#29305;&#39640;&#21387;&#12289;&#30005;&#21378;&#12289;&#27700;&#30005;&#31449;&#19982;&#26032;&#33021;&#28304;&#39033;&#30446;&#24314;&#35774;&#12290;</p>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="hero-mask"></div>
-      <img src="web-assets/power-supply.jpg" alt="">
-      <div class="hero-copy">
-        <h2>&#38754;&#21521;&#33021;&#28304;&#19982;&#30005;&#21147;&#22330;&#26223;&#30340;&#31283;&#23450;&#20132;&#20184;&#33021;&#21147;</h2>
-        <p>&#22260;&#32469;&#22823;&#22411;&#27700;&#30005;&#12289;&#28779;&#30005;&#12289;&#36755;&#21464;&#30005;&#19982;&#28165;&#27905;&#33021;&#28304;&#24314;&#35774;&#38656;&#27714;&#65292;&#24418;&#25104;&#20135;&#21697;&#24212;&#29992;&#19982;&#24037;&#31243;&#37197;&#22871;&#30340;&#32508;&#21512;&#35299;&#20915;&#26041;&#26696;&#12290;</p>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="hero-mask"></div>
-      <img src="web-assets/inverter-real.jpg" alt="">
-      <div class="hero-copy">
-        <h2>&#30005;&#21147;&#30005;&#28304; / &#39640;&#21387;&#21464;&#39057;&#22120; / &#22312;&#32447;&#30417;&#27979;</h2>
-        <p>&#32858;&#28966;&#31995;&#32479;&#31283;&#23450;&#12289;&#23433;&#20840;&#36816;&#32500;&#19982;&#33410;&#33021;&#22686;&#25928;&#65292;&#25345;&#32493;&#23436;&#21892;&#33258;&#21160;&#21270;&#20135;&#21697;&#30697;&#38453;&#19982;&#39033;&#30446;&#23454;&#36341;&#32463;&#39564;&#12290;</p>
-      </div>
-    </div>
+<div class="hero-video" id="home">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="web-assets/home-hero-20s.mp4" type="video/mp4">
+  </video>
+  <div class="hero-mask"></div>
+  <div class="hero-copy">
+    <h2>&#23665;&#19996;&#27888;&#24320;&#33258;&#21160;&#21270;&#26377;&#38480;&#20844;&#21496;</h2>
+    <p>&#25104;&#31435;&#20110;2003&#24180;&#65292;&#27880;&#20876;&#36164;&#37329;11000&#19975;&#20803;&#65292;&#20027;&#33829;&#30005;&#21147;&#30005;&#28304;&#12289;&#39640;&#21387;&#21464;&#39057;&#22120;&#12289;&#21464;&#30005;&#31449;&#29366;&#24577;&#30417;&#27979;&#31995;&#32479;&#19977;&#22823;&#31867;&#20135;&#21697;&#65292;&#25345;&#32493;&#26381;&#21153;&#29305;&#39640;&#21387;&#12289;&#30005;&#21378;&#12289;&#27700;&#30005;&#31449;&#19982;&#26032;&#33021;&#28304;&#39033;&#30446;&#24314;&#35774;&#12290;</p>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
 </div>
 
 <div class="page-wrapper-row full-height">
@@ -380,14 +355,6 @@ $(function() {
       $('.solution-detail ul li.' + $(this).attr('data-item')).addClass('active');
     });
   });
-});
-var swiper = new Swiper(".mySwiper", {
-  speed:1000,
-  spaceBetween:0,
-  centeredSlides:true,
-  autoplay:{delay:4000,disableOnInteraction:false},
-  pagination:{el:".mySwiper .swiper-pagination",clickable:true},
-  navigation:{nextEl:".mySwiper .swiper-button-next",prevEl:".mySwiper .swiper-button-prev"}
 });
 var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView:4,
